@@ -23,6 +23,40 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        switch (auth()->user()->role->id) {
+            case '1':
+            echo '<h1>Admin</h1>';
+            break;
+            case '2':
+            return redirect()->route('fd.dashboard');
+            break;  
+            case '3':
+            echo '<h1>Housekeeping</h1>';
+            break;
+            case '4':
+            echo '<h1>Kitchen</h1>';
+            break;
+        }
     })->name('dashboard');
+});
+
+Route::prefix('fd')->middleware([
+    'auth:sanctum',
+    'frontdesk',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+       return view('frontdesk.pages.main');
+    })->name('fd.dashboard');
+    Route::get('/checkin', function () {
+        return view('frontdesk.pages.checkin.main');
+    })->name('fd.checkin');
+    Route::get('/inhouse', function () {
+        return view('frontdesk.pages.inhouse.main');
+    })->name('fd.inhouse');
+
+    Route::get('/rooms', function () {
+        return view('frontdesk.pages.rooms.main');
+    })->name('fd.rooms');
 });
