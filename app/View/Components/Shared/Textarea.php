@@ -4,9 +4,8 @@ namespace App\View\Components\Shared;
 
 use Illuminate\View\Component;
 
-class Input extends Component
+class Textarea extends Component
 {
- 
     /**
      * Create a new component instance.
      *
@@ -14,7 +13,7 @@ class Input extends Component
      */
     public function __construct()
     {
-      
+        //
     }
 
     /**
@@ -24,6 +23,6 @@ class Input extends Component
      */
     public function render()
     {
-        return view('components.shared.input');
+        return view('components.shared.textarea');
     }
 }

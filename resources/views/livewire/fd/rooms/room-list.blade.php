@@ -26,8 +26,8 @@
             </div>
         </div>
         <div class="flex space-x-2">
-            <button x-on:click="$dispatch('create-room')"
-                type="button"
+            <button type="button"
+                wire:click="notif"
                 class="inline-flex items-center px-4 py-2 text-sm font-medium text-white duration-150 ease-in-out border border-transparent rounded-md shadow-sm bg-highlights focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-highlights">
                 Add new room
             </button>

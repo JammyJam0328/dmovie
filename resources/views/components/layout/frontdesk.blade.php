@@ -25,7 +25,6 @@
         href="{{ mix('css/app.css') }}">
 
     @livewireStyles
-    @wireUiScripts
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"
         defer></script>
@@ -276,9 +275,11 @@
                 {{ $slot }}
             </div>
         </main>
+        <x-shared.notification />
     </div>
 
     @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>

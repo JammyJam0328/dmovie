@@ -13,18 +13,17 @@ if ($attributes->whereStartsWith('wire:model')->first()) {
     $name = $id;
 }
 @endphp
-
 <div>
     @if ($attributes->whereStartsWith('label')->first())
         <label class="text-gray-500"
             for="{{ $id }}">{{ $attributes->get('label') }}</label>
     @endif
-    <input type="{{ $type ?? 'text' }}"
-        {{ $attributes->whereStartsWith('wire:model') }}
-        {{ $attributes->whereStartsWith('placeholder') }}
+    <select {{ $attributes->whereStartsWith('wire:model') }}
         {{ $attributes->class(['shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-sm border-gray-300 rounded-md']) }}
         name="{{ $name }}"
-        id="{{ $id }}" />
+        id="{{ $id }}">
+        {{ $slot }}
+    </select>
     @if ($attributes->whereStartsWith('wire:model')->first())
         @error($attributes->whereStartsWith('wire:model')->first())
             <div class="mt-2 text-xs text-red-500">{{ $message }}</div>

@@ -1,6 +1,23 @@
+@props([
+    'label' => null,
+    'type' => null,
+    'icon' => null,
+    'loading' => false,
+])
+
 <div>
-    <button wire:loading.attr="disabled"
-        class="px-3 py-1 duration-150 ease-in-out bg-gray-700 border rounded-full text-gray-50 hover:bg-gray-600 focus:text-white focus:ring-2 focus:ring-gray-300 focus:ring-offset-2">
-        {{ $slot }}
+    <button type="{{ $type ?? 'button' }}"
+        {{ $attributes->whereStartsWith('wire:click') }}
+        wire:loading.attr="disabled"
+        wire:loading.class="cursor-wait"
+        class="inline-flex {{ $icon ? 'flex items-center justify-center space-x-1' : '' }}    items-center px-4 py-2 text-sm font-medium text-white  ease-in-out duration-150 border border-transparent rounded-md shadow-sm bg-highlights focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-highlights">
+        @if ($icon)
+            <span>
+                {{ $icon }}
+            </span>
+        @endif
+        <span>
+            {{ $label }}
+        </span>
     </button>
 </div>

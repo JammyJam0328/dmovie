@@ -30,7 +30,7 @@
                                 <div class="px-4 py-6 bg-gray-50 sm:px-6 ">
                                     <div class="flex items-start justify-between space-x-3">
                                         <div class="space-y-1">
-                                            <h2 class="text-lg font-medium text-gray-900"
+                                            <h2 class="text-xl font-bold text-gray-900"
                                                 id="slide-over-title">
                                                 Create Room
                                             </h2>
@@ -62,14 +62,86 @@
                                     <div
                                         class="px-4 space-y-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 sm:px-6 sm:py-5">
                                         <div>
-                                            <label for="room-number"
-                                                class="block text-sm font-medium text-gray-900 sm:mt-px sm:pt-2">
+                                            <label class="block font-medium text-gray-900 sm:mt-px sm:pt-2">
                                                 Room Number
                                             </label>
                                         </div>
                                         <div class="sm:col-span-2">
-                                            <x-shared.input name="name"
-                                                class="focus:ring-0" />
+                                            <x-shared.input placeholder="ex. 6" />
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="px-4 space-y-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 sm:px-6 sm:py-5">
+                                        <div>
+                                            <label class="block font-medium text-gray-900 sm:mt-px sm:pt-2">
+                                                Type
+                                            </label>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <x-shared.select>
+                                                <option value="">Select</option>
+                                                <option value="public">Public</option>
+                                                <option value="private">Private</option>
+                                            </x-shared.select>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="px-4 space-y-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 sm:px-6 sm:py-5">
+                                        <div>
+                                            <label class="block font-medium text-gray-900 sm:mt-px sm:pt-2">
+                                                Floor
+                                            </label>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <x-shared.select>
+                                                <option value="">Select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                                <option value="32">32</option>
+                                                <option value="33">33</option>
+                                                <option value="34">34</option>
+                                                <option value="35">35</option>
+                                            </x-shared.select>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="px-4 space-y-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 sm:px-6 sm:py-5">
+                                        <div>
+                                            <label class="block font-medium text-gray-900 sm:mt-px sm:pt-2">
+                                                Description
+                                            </label>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <x-shared.textarea rows="5" />
                                         </div>
                                     </div>
                                 </div>
@@ -78,10 +150,9 @@
                             <!-- Action buttons -->
                             <div class="flex-shrink-0 px-4 py-5 border-t border-gray-200 sm:px-6">
                                 <div class="flex justify-end space-x-3">
-                                    <button type="button"
-                                        class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Cancel</button>
-                                    <button type="submit"
-                                        class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create</button>
+                                    <x-button.primary wire:click.prevent="go"
+                                        label="Save">
+                                    </x-button.primary>
                                 </div>
                             </div>
                         </form>
