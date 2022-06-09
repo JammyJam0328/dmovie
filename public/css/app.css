@@ -1331,10 +1331,13 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .translate-y-2 {
   --tw-translate-y: 0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+=======
+>>>>>>> Stashed changes
 .translate-x-2 {
   --tw-translate-x: 0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1690,6 +1693,7 @@ select {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
@@ -1710,6 +1714,8 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
+=======
+>>>>>>> Stashed changes
 .bg-green-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(240 253 244 / var(--tw-bg-opacity));
@@ -2309,9 +2315,12 @@ select {
   transition-duration: 500ms;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .duration-100 {
   transition-duration: 100ms;
 }
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 .ease-in-out {
