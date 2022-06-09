@@ -20,6 +20,10 @@
         "tailwindcss": "^3.0.0"
     },
     "dependencies": {
+<<<<<<< Updated upstream
         "@alpinejs/intersect": "^3.10.2"
+=======
+        "kioskboard": "^2.2.0"
+>>>>>>> Stashed changes
     }
 }

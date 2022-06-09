@@ -14,11 +14,15 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
+                kanit: ['Kanit', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 'background': '#deeeec',
                 'highlights': '#3c8b84',
-            }
+            },
+            backgroundImage: {
+                mainback: "url('/images/bg.svg')",
+            },
         },
     },
 

@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+<<<<<<< Updated upstream
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/alpinejs/dist/module.esm.js":
@@ -22731,6 +22732,10 @@ process.umask = function() { return 0; };
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+=======
+/******/ 	"use strict";
+/******/ 	
+>>>>>>> Stashed changes
 /******/ 	
 /******/ })()
 ;

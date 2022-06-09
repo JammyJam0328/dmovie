@@ -15,7 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+Route::get('/select-room-type', function () {
+    return view('customer.select-room');
+})->name('select-room-type');
+Route::get('/select-room', function () {
+    return view('customer.room');
+})->name('select-room');
+Route::get('/checkIn-information', function () {
+    return view('customer.checkin-information');
+})->name('checkin-information');
 
 Route::middleware([
     'auth:sanctum',
