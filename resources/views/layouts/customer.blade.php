@@ -18,11 +18,14 @@
     <!-- Styles -->
     <link rel="stylesheet"
         href="{{ mix('css/app.css') }}">
-
+      
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"
         defer></script>
+   
+       
+   
        
 </head>
 
@@ -46,13 +49,7 @@
            @yield('main')
         </div>
     </div>
+    @stack('scripts')
 </body> 
-    <script src="dist/kioskboard-aio-2.2.0.min.js"></script>
-    <script>
-        KioskBoard.run('.jsvirtualkeyboard', {
-            KioskBoard.run('.jsvirtualkeyboard');
-});
-    </script>
-</body>
 
 </html>

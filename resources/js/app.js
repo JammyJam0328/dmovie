@@ -1,9 +1,8 @@
 import './bootstrap';
-import KioskBoard from 'kioskboard';
+
 import Keyboard from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
 import Alpine from 'alpinejs';
-
 window.Alpine = Alpine;
 
 Alpine.start();
@@ -23,3 +22,4 @@ function onChange(input) {
 function onKeyPress(button) {
     console.log("Button pressed", button);
 }
+
