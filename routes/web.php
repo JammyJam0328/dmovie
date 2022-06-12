@@ -25,6 +25,9 @@ Route::get('/select-room', function () {
 Route::get('/checkIn-information', function () {
     return view('customer.checkin-information');
 })->name('checkin-information');
+Route::get('/qr-print', function () {
+    return view('customer.qr-print');
+})->name('qr');
 
 Route::middleware([
     'auth:sanctum',

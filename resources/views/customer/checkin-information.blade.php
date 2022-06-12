@@ -69,8 +69,8 @@
                                     <div class="mt-5 flex justify-between">
                                         <a href="#"
                                             class="bg-highlights border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center font-black font-poppins text-white">BACK</a>
-                                        <a href=""
-                                            class="bg-highlights border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center font-black font-poppins text-white">COMFIRM</a>
+                                        <a href="{{route('qr')}}"
+                                            class="bg-highlights border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center font-black font-poppins text-white">CONFIRM</a>
                                     </div>
                                 </div>
 
