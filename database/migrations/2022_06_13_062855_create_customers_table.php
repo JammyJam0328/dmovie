@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name');
+            $table->string('full_name')->nullable();
             $table->string('selected_hours');
             $table->timestamps();
         });
