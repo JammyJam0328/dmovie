@@ -18,7 +18,7 @@
     <link rel="preconnect"
         href="https://fonts.gstatic.com"
         crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Poppins&display=swap"
         rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet"
@@ -28,6 +28,11 @@
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"
         defer></script>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body class="antialiased font-poppins bg-background">
@@ -184,11 +189,8 @@
                             name="tabs"
                             class="block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
                             <option selected>My Account</option>
-
                             <option>Company</option>
-
                             <option>Team Members</option>
-
                             <option>Billing</option>
                         </select>
                     </div>

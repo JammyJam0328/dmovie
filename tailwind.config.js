@@ -14,7 +14,7 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
-                kanit: ['Kanit', ...defaultTheme.fontFamily.sans],
+                cabin: ['Cabin', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 'background': '#deeeec',

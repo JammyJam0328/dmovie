@@ -22,4 +22,3 @@ function onChange(input) {
 function onKeyPress(button) {
     console.log("Button pressed", button);
 }
-

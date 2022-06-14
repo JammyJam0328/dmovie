@@ -13,13 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rooms', function (Blueprint $table) {
+        Schema::create('bills', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('type_id');
-            $table->string('number');
-            $table->string('floor');
-            $table->string('description')->nullable();
-            $table->unsignedInteger('status_id');
+            $table->foreignId('customer_id')->constrained();
+            $table->string('deposit');
+            $table->string('room_amount');
+            $table->string('total_amount');
+            $table->string('given_amount');
+            $table->string('change_amount');
+            $table->string('remarks');
+            $table->string('paid_at');
             $table->timestamps();
         });
     }
@@ -31,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rooms');
+        Schema::dropIfExists('bills');
     }
 };

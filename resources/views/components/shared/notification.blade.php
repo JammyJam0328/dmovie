@@ -1,8 +1,8 @@
 <div x-data="notification"
     x-on:notify.window="pushNewNotification(event.detail)">
     <div aria-live="assertive"
-        class="fixed inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start">
-        <div class="flex flex-col items-center w-full space-y-4 sm:items-end">
+        class="fixed inset-0 z-50 flex items-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start">
+        <div class="z-50 flex flex-col items-center w-full space-y-4 sm:items-end">
             <template x-for="notif of notifications"
                 x-bind:key="notif.id">
                 <div x-show="visibles.includes(notif)"
@@ -133,7 +133,7 @@
                     setTimeout(() => {
                         this.removeFromVisibles(id);
                         // this.removeFromNotifications(id);
-                    }, 3000)
+                    }, 5000)
                 },
                 removeFromVisibles(id) {
                     const notice = this.visibles.find(notice => notice.id == id)

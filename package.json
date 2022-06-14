@@ -21,7 +21,6 @@
     },
     "dependencies": {
         "@alpinejs/intersect": "^3.10.2",
-        "kioskboard": "^2.2.0",
         "simple-keyboard": "^3.4.110"
     }
 }
