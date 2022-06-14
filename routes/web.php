@@ -16,14 +16,31 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-Route::get('/select-room-type', function () {
-    return view('customer.select-room');
+Route::get('/select-room-type', function (Request $request) {
+    $hrs = $_GET['hrs'];
+    return view('customer.select-room',[
+        'hrs'=>$hrs
+    ]);
 })->name('select-room-type');
-Route::get('/select-room', function () {
-    return view('customer.room');
+Route::get('/select-room', function (Request $request) {
+    $hrs = $_GET['hrs'];
+    $room_type = $_GET['room_type']; 
+    $rooms = \App\Models\Room::where('type_id',$room_type)->where('status_id','2')->get();  
+    return view('customer.room',[
+        'hrs'=>$hrs,
+        'room_type'=>$room_type,
+        'rooms'=>$rooms
+    ]);
 })->name('select-room');
-Route::get('/checkIn-information', function () {
-    return view('customer.checkin-information');
+Route::get('/checkIn-information', function (Request $request) {
+    $hrs = $_GET['hrs'];
+    $room_type = $_GET['room_type'];
+    $room_id = $_GET['room_id'];
+    return view('customer.checkin-information',[
+        'hrs'=>$hrs,
+        'room_type'=>$room_type,
+        'room_id'=>$room_id
+    ]);
 })->name('checkin-information');
 Route::get('/qr-print', function () {
     return view('customer.qr-print');

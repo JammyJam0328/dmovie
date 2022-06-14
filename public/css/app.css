@@ -1908,6 +1908,9 @@ select {
 .p-5 {
   padding: 1.25rem;
 }
+.p-14 {
+  padding: 3.5rem;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -1916,9 +1919,6 @@ select {
 }
 .p-8 {
   padding: 2rem;
-}
-.p-14 {
-  padding: 3.5rem;
 }
 .px-4 {
   padding-left: 1rem;
