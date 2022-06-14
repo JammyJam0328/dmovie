@@ -5,21 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class Customer extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
     public function checkinout()
     {
-        return $this->hasMany(CheckInOut::class);
-    }
-    public function status()
-    {
-        return $this->belongsTo(Status::class);
+        return $this->hasOne(CheckInOut::class);
     }
 
-    public function type()
+    public function bill()
     {
-        return $this->belongsTo(Type::class);
+        return $this->hasOne(Bill::class);
     }
+
+    public function additionalbills()
+    {
+        return $this->hasMany(AdditionalBill::class);
+    }
+
+
 }

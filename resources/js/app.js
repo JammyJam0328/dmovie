@@ -1,5 +1,4 @@
 import './bootstrap';
-import KioskBoard from 'kioskboard';
 import Keyboard from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
 import Alpine from 'alpinejs';

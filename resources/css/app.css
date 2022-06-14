@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-[x-cloak] {
-    display: none !important;
+
+
+@layer components {
+   .form-input{
+     @apply p-2 rounded-md border border-gray-300 focus:ring-1 focus:ring-highlights focus:border-highlights;
+   }
+   .button-primary{
+     @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500;
+   }
 }
