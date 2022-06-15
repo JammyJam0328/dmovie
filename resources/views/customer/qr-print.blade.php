@@ -16,10 +16,14 @@
                                     <div class=" rounded-lg " x-data="{keyboard:false}">
                                        <div class="flex flex-col border-2 border-highlights rounded-xl shadow-lg bg-white bg-opacity-70 justify-center py-5 items-center">
                                        <div class="bg-gradient-to-t from-gray-300 via-transparent shadow-lg to-gray-100 p-14 rounded-full  ">
-                                        {{QrCode::size(200)->generate('20220612001');}}
+                                        @php
+                                            $transaction_code = \App\Models\CheckInOut::where('id', $id)->first();
+                                            
+                                        @endphp
+                                        {{QrCode::size(200)->generate($transaction_code->qr_code);}}
                                        </div>
                                         <div class="mt-2">
-                                            <span class="text-lg font-bold text-gray-700 underline font-poppins">20220612001</span>
+                                            <span class="text-lg font-bold text-gray-700 underline font-poppins">{{$transaction_code->qr_code}}</span>
                                         </div>
                                         <div class="mt-2 px-2">
                                             <p class="text-sm lg:text-lg italic text-red-600">Please take a screenshot of your transaction QR code for validation of your check-in details at the frontDesk. </p>

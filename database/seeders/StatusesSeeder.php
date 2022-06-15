@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Room;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
 use App\Models\Status;
 class StatusesSeeder extends Seeder
 {
@@ -29,6 +31,19 @@ class StatusesSeeder extends Seeder
         Status::create([
             'name' => 'Uncleaned',
             'description' => 'Room is uncleaned',
+        ]);
+
+        Room::create([
+            'type_id' => 1,
+            'number' =>  1,
+            'floor' => 1,
+            'status_id' => 2,
+        ]);
+        Room::create([
+            'type_id' => 1,
+            'number' =>  2,
+            'floor' => 2,
+            'status_id' => 2,
         ]);
     }
 }
