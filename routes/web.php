@@ -1,6 +1,8 @@
 <?php
 
+// use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,8 +44,13 @@ Route::get('/checkIn-information', function (Request $request) {
         'room_id'=>$room_id
     ]);
 })->name('checkin-information');
-Route::get('/qr-print', function () {
-    return view('customer.qr-print');
+
+Route::get('/qr-print', function (Request $request) {
+    $id = $request->id;
+    return view('customer.qr-print',[
+        'id'=>$id
+    
+    ]);
 })->name('qr');
 
 Route::middleware([

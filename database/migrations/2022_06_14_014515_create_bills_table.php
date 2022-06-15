@@ -18,11 +18,11 @@ return new class extends Migration
             $table->foreignId('customer_id')->constrained();
             $table->string('deposit');
             $table->string('room_amount');
-            $table->string('total_amount');
-            $table->string('given_amount');
-            $table->string('change_amount');
-            $table->string('remarks');
-            $table->string('paid_at');
+            $table->string('total_amount')->nullable();
+            $table->string('given_amount')->nullable();
+            $table->string('change_amount')->nullable();
+            $table->string('remarks')->nullable();
+            $table->string('paid_at')->nullable();
             $table->timestamps();
         });
     }

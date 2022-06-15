@@ -10,7 +10,7 @@ class Type extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function rate()
+    public function rates()
     {
         return $this->hasMany(Rate::class);
     }

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('room_id')->constrained();
             $table->string('hours');
             $table->string('check_in_date');
-            $table->string('check_out_date');
+            $table->string('check_out_date')->nullable();
             $table->timestamps();
         });
     }
