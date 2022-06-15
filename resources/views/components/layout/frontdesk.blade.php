@@ -54,20 +54,29 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="flex items-center ml-4 md:ml-6">
-                            <button type="button"
-                                class="p-1 text-gray-400 bg-gray-700 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <form method="POST"
+                                action="{{ route('logout') }}"
+                                x-data>
+                                @csrf
+                                <x-jet-dropdown-link href="{{ route('logout') }}"
+                                    class="p-1 text-gray-400 bg-gray-700 rounded-full hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                    @click.prevent="$root.submit();">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="w-6 h-6 "
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2">
+                                        <path stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                    </svg>
+                                </x-jet-dropdown-link>
+                            </form>
+                            {{-- <button type="button">
                                 <span class="sr-only">Logout</span>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-6 h-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    stroke-width="2">
-                                    <path stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                                </svg>
-                            </button>
+
+                            </button> --}}
                         </div>
                     </div>
                     <div class="flex -mr-2 md:hidden">
