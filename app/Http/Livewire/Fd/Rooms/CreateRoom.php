@@ -37,9 +37,14 @@ class CreateRoom extends Component
             'type_id' => $this->room_type,
             'floor' => $this->room_floor,
             'description' => $this->room_description,
-            'status_id' => 1,
+            'status_id' => 2,
         ]);
-        $this->reset();
+        $this->reset([
+            'room_number',
+            'room_type',
+            'room_floor',
+            'room_description',
+        ]);
         $this->emit('loadNewRooms');
         $this->notify([
             'title' => 'Success',
