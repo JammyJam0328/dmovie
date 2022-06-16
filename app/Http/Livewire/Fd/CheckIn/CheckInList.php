@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\Fd\CheckIn;
 
 use Livewire\Component;
-use App\Models\{CheckInOut,Bill};
+use App\Models\{CheckInOut,Bill,Room};
 use Livewire\WithPagination;
 class CheckInList extends Component
 {
@@ -24,6 +24,11 @@ class CheckInList extends Component
         $checkIn->update([
             'status'=>'checked-in',
         ]);
+        
+        $room = Room::where('id',$checkIn->room_id)->first();
+        $room->update([
+            'status_id'=>3,
+        ]);
         $bill = Bill::where('customer_id',$checkIn->customer_id)->first();
         $bill->update([
             'given_amount'=>$bill->room_amount + 200,
@@ -38,6 +43,9 @@ class CheckInList extends Component
         $checkIn = CheckInOut::where('id',$checkInId)->first();
         $checkIn->update([
             'status'=>'checked-in',
+        ]);
+        $room->update([
+            'status_id'=>3,
         ]);
         $bill = Bill::where('customer_id',$checkIn->customer_id)->first();
         $bill->update([
