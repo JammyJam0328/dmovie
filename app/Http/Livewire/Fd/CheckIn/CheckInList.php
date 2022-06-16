@@ -44,6 +44,8 @@ class CheckInList extends Component
         $checkIn->update([
             'status'=>'checked-in',
         ]);
+
+        $room = Room::where('id',$checkIn->room_id)->first();
         $room->update([
             'status_id'=>3,
         ]);
