@@ -48,7 +48,7 @@
                         </div>
                         <div class="hidden ml-4 md:block">
                             <h1 class="text-3xl font-bold text-white">
-                                D'Morvie Pension House
+                                D'Morvie
                             </h1>
                         </div>
                     </div>
