@@ -91,7 +91,8 @@
                                         <td
                                             class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-6">
                                             @if ($customer->status == 'processing')
-                                                <button x-on:click="$dispatch('show-payment',{
+                                                <button
+                                                    x-on:click="$dispatch('show-payment',{
                                                 room_amount : {{ $customer->customer->bill->room_amount }},
                                                 checkin_id : '{{ $customer->id }}',
                                             })"
@@ -117,7 +118,8 @@
         </div>
         <div id="modal"
             x-data="{ isOpen: false, roomAmount: '', checkInId: '', depositeAmount: 200 }"
-            x-on:show-payment.window="isOpen = true; roomAmount = event.detail.room_amount; checkInId = event.detail.checkin_id">
+            x-on:show-payment.window="isOpen = true; roomAmount = event.detail.room_amount; checkInId = event.detail.checkin_id"
+            x-on:close-payment.window="isOpen=false">
             <div x-cloak
                 x-show="isOpen"
                 class="relative z-10"

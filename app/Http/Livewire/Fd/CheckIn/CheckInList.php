@@ -29,6 +29,8 @@ class CheckInList extends Component
             'given_amount'=>$bill->room_amount + 200,
             'paid_at'=> now(),
         ]);
+
+        $this->dispatchBrowserEvent('close-payment');
     }
 
     public function payDeposit($checkInId)
@@ -41,5 +43,7 @@ class CheckInList extends Component
         $bill->update([
             'given_amount'=>200,
         ]);
+        $this->dispatchBrowserEvent('close-payment');
+
     }
 }
